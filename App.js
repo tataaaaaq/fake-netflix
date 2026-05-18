@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  View,
-  Text,
-  TextInput,
-  FlatList,
-  Image,
-  StyleSheet
-} from "react-native";
+import { View, Text, TextInput, FlatList, Image, StyleSheet} from "react-native";
 
 import { getMovies } from "./services/api";
 
@@ -26,8 +19,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-
-      {/* 🔍 SEARCH BAR */}
+    
       <TextInput
         style={styles.input}
         placeholder="Buscar filme..."
@@ -39,7 +31,6 @@ export default function App() {
         }}
       />
 
-      {/* 🎬 CARROSSEL */}
       <FlatList
         data={movies}
         horizontal
@@ -62,7 +53,7 @@ export default function App() {
             </Text>
 
             <Text style={styles.text}>
-              📅 {item.release_date}
+              {item.release_date}
             </Text>
 
             <Text style={styles.text}>
@@ -81,7 +72,7 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-    backgroundColor: "#111", // 🔥 fundo escuro Netflix
+    backgroundColor: "#111",
     paddingTop: 50,
   },
 
